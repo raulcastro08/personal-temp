@@ -197,7 +197,8 @@ function HomeScreen() {
             </Text>
 
             <Button
-              tag="button"
+              tag="link"
+              href="/sobre"
               variant="primary.main"
               fullWidth
               margin={{

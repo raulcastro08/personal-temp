@@ -1,5 +1,6 @@
 import React from "react";
 import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
+import Text from "../../foundation/Text";
 import {
   DefaultFooterWrapperProps,
   FooterWrapper,
@@ -12,15 +13,18 @@ const Footer: React.FC<DefaultFooterWrapperProps> = (props) => {
   return (
     <FooterWrapper {...props}>
       <CentralSide>
-        <a href="https://www.alura.com.br/">
-          <FiInstagram />
-        </a>
-        <a href="https://www.alura.com.br/">
-          <FiTwitter />
-        </a>
-        <a href="https://www.alura.com.br/">
-          <FiFacebook />
-        </a>
+        <Text
+          variant="paragraph1"
+          tag="h3"
+          color="secondary.main"
+          textAlign={{
+            xs: "center",
+            md: "center",
+          }}
+          fontFamily="Montserrat"
+        >
+          © 2021 Todos os direitos reservados | Company Name
+        </Text>
       </CentralSide>
     </FooterWrapper>
   );

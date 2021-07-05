@@ -1,7 +1,6 @@
 import React from "react";
 import { Logo } from "@theme/Logo";
 import Text from "../../foundation/Text";
-import { Button } from "../Button";
 import { MenuWrapper } from "./styles/MenuWrapper";
 
 type MenuLink = {
@@ -15,24 +14,20 @@ const links: MenuLink[] = [
   {
     text: "Home",
 
-    url: "?counter=10",
+    url: "/",
     scroll: true,
   },
   {
     text: "Sobre",
-    url: "/#",
+    url: "/sobre",
   },
   {
     text: "Contato",
-    url: "/#",
+    url: "/contato",
   },
 ];
 
-type MenuProps = {
-  onSignupClick: React.MouseEventHandler<HTMLButtonElement>;
-};
-
-const Menu: React.FC<MenuProps> = ({ onSignupClick }) => {
+const Menu = () => {
   return (
     <MenuWrapper.Menu>
       <MenuWrapper.LeftSide>

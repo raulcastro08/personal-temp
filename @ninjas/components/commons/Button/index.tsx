@@ -29,13 +29,11 @@ const ButtonGhost = css<ButtonDefaultProps>`
 `;
 
 const ButtonDefault = css<ButtonDefaultProps>`
-  color: white;
   background-color: ${({ theme, variant }) =>
     getColor(theme.colors, variant)?.color};
   color: ${({ theme, variant }) =>
     getColor(theme.colors, variant)?.contrastText};
 `;
-
 const ButtonWrapper = styled.button<ButtonWrapperProps & ButtonDefaultProps>`
   border: 0;
   cursor: pointer;
@@ -93,9 +91,11 @@ const Button: React.FC<
     GenericButtonProps
 > = ({ children, variant, ...props }) => {
   if (props.tag === "link") {
-    <ButtonWrapper href={props.href} {...props} as={Link}>
-      {children}
-    </ButtonWrapper>;
+    return (
+      <ButtonWrapper href={props.href} {...props} variant={variant} as={Link}>
+        {children}
+      </ButtonWrapper>
+    );
   }
 
   if (props.tag === "button") {

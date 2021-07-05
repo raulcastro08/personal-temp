@@ -13,16 +13,17 @@ export const FooterWrapper = styled.footer<DefaultFooterWrapperProps>`
   border-radius: 4px;
   padding-right: 50px;
   padding-left: 50px;
+  background-color: #fffa;
 `;
 export const LeftSide = styled.div`
-  display: inline;
+  display: flex;
   padding: 0;
   margin: 0;
   order: 1;
   ${breakpointsMedia({
     md: css`
-      width: 131px;
-      height: 32px;
+      width: 100%;
+      height: 100px;
     `,
   })}
   ${breakpointsMedia({
@@ -35,8 +36,8 @@ export const LeftSide = styled.div`
     color: ${({ theme }) => theme.colors.primary.main.color};
     text-decoration: none;
     transition: 0.3s;
-    margin: 4px;
-    display: inline;
+    /* margin: 4px; */
+    display: flex;
     &:hover,
     &:focus {
       opacity: 0.5;
@@ -47,8 +48,6 @@ export const RightSide = styled.div`
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: right;
-  flex: 1;
   order: 2;
   ${breakpointsMedia({
     md: css`
@@ -61,12 +60,12 @@ export const CentralSide = styled.div`
   padding: 0;
   margin: 0;
   order: 3;
-  width: 100%;
+  width: 20%;
   list-style: none;
   display: inline;
   align-items: center;
-  justify-content: left;
-  padding-left: 30px;
+  justify-content: center;
+
   margin-top: 17px;
   a {
     color: ${({ theme }) => theme.colors.primary.main.color};
@@ -79,8 +78,8 @@ export const CentralSide = styled.div`
       opacity: 0.5;
     }
     svg {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
     }
   }
   ${breakpointsMedia({

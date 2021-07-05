@@ -10,7 +10,6 @@ interface StyledLinkDefaultProps {
 }
 
 const StyledLink = styled.a<StyledLinkDefaultProps>`
-  color: inherit;
   ${({ theme, color }) =>
     color
       ? `color: ${getColor(theme.colors, color)?.color}`
