@@ -7,33 +7,38 @@ export type MenuWrapperDefaultProps = React.HTMLAttributes<HTMLElement>;
 export const Menu = styled.nav<MenuWrapperDefaultProps>`
   font-family: "Montserrat", sans-serif;
   display: flex;
+  z-index: 1;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 28px;
   padding-right: 28px;
-  /* position: fixed; */
+  position: fixed;
   top: 0;
   left:0;
   right: 0;
-  background-color: #fff;
+  background-color: #e9e9e9;
 }
   ${breakpointsMedia({
     md: css`
       justify-content: flex-start;
-      align-items: center;
-      margin-top: 32px;
-      margin-left: auto;
-      margin-right: auto;
+      align-items: left;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 150px;
       width: 100%;
+      height: 80px;
       padding: 0 16px;
       max-width: 768px;
     `,
     lg: css`
-      max-width: 1160px;
+      max-width: 1519px;
+      padding-left: 150px;
     `,
     xl: css`
-      max-width: 1222px;
+      max-width: 1519px;
+      padding-left: 150px;
     `,
   })}
 `;
@@ -51,6 +56,7 @@ const LeftSide = styled.div`
     md: css`
       order: initial;
       padding-right: 16px;
+      width: 50%;
     `,
   })}
 `;
@@ -62,7 +68,7 @@ const CentralSide = styled.div`
   width: 100%;
   list-style: none;
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: space-between;
   margin-top: 17px;
   border-top: 1px solid #88989e;

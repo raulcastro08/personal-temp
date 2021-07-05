@@ -36,7 +36,7 @@ const aboutScreen = () => {
                 md: "left",
               }}
             >
-              Dra. Manuela Costa
+              Dra. Alice Braga
             </Text>
             <Text
               variant="paragraph1"

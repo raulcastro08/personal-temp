@@ -1,11 +1,11 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { Button } from "@ninjas/components/commons/Button";
-import TextField from "@ninjas/components/forms/TextField";
-import { useForm } from "@ninjas/infra/hooks/forms/useForm";
+import { Button } from "../../../@ninjas/components/commons/Button";
+import TextField from "../../../@ninjas/components/forms/TextField";
+import { useForm } from "../../../@ninjas/infra/hooks/forms/useForm";
 import { loginService } from "../../services/login/loginService";
 
-function FormEmail() {
+function FormNewsletter() {
   const router = useRouter();
   const initialValues = {
     username: "",
@@ -30,28 +30,16 @@ function FormEmail() {
   });
 
   return (
-    <form id="formEmail" onSubmit={form.handleSubmit}>
+    <form
+      style={{ display: "flex" }}
+      id="newsletterForm"
+      onSubmit={form.handleSubmit}
+    >
       <TextField
         tag="input"
         placeholder="Nome"
         name="username"
         value={form.values.username}
-        onChange={form.handleChange}
-      />
-      <TextField
-        tag="input"
-        placeholder="Email"
-        name="email"
-        type="email"
-        value={form.values.password}
-        onChange={form.handleChange}
-      />
-
-      <TextField
-        tag="input"
-        placeholder="Digite sua mensagem aqui...."
-        name="content"
-        value={form.values.password}
         onChange={form.handleChange}
       />
 
@@ -61,9 +49,8 @@ function FormEmail() {
         variant="primary.main"
         margin={{
           xs: "0 auto",
-          md: "initial",
+          md: "0 5px",
         }}
-        fullWidth
       >
         Enviar
       </Button>
@@ -71,4 +58,4 @@ function FormEmail() {
   );
 }
 
-export default FormEmail;
+export default FormNewsletter;
