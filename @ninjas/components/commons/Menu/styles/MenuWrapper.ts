@@ -5,43 +5,35 @@ import { TextStyleVariantsMap } from "../../../foundation/Text";
 export type MenuWrapperDefaultProps = React.HTMLAttributes<HTMLElement>;
 
 export const Menu = styled.nav<MenuWrapperDefaultProps>`
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   display: flex;
-  z-index: 1;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 28px;
   padding-right: 28px;
-  position: fixed;
-  top: 0;
-  left:0;
-  right: 0;
-  background-color: #e9e9e9;
-}
   ${breakpointsMedia({
+    lg: css`
+      max-width: 1160px;
+    `,
+    xl: css`
+      max-width: 1222px;
+    `,
     md: css`
       justify-content: flex-start;
-      align-items: left;
+      align-items: center;
       margin-top: 0;
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 150px;
+      margin-left: auto;
+      margin-right: auto;
       width: 100%;
-      height: 80px;
       padding: 0 16px;
       max-width: 768px;
     `,
-    lg: css`
-      max-width: 1519px;
-      padding-left: 150px;
-    `,
-    xl: css`
-      max-width: 1519px;
-      padding-left: 150px;
-    `,
   })}
 `;
+
 const LeftSide = styled.div`
   padding: 0;
   margin: 0;
@@ -56,7 +48,6 @@ const LeftSide = styled.div`
     md: css`
       order: initial;
       padding-right: 16px;
-      width: 50%;
     `,
   })}
 `;
@@ -68,7 +59,7 @@ const CentralSide = styled.div`
   width: 100%;
   list-style: none;
   display: flex;
-  align-items: right;
+  align-items: center;
   justify-content: space-between;
   margin-top: 17px;
   border-top: 1px solid #88989e;
@@ -113,15 +104,44 @@ const CentralSide = styled.div`
 const RightSide = styled.div`
   padding: 0;
   margin: 0;
+  width: 126px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 17px;
   flex: 1;
   order: 2;
   justify-content: flex-end;
+  list-style: none;
   ${breakpointsMedia({
     md: css`
       order: initial;
     `,
+    lg: css`
+      order: initial;
+    `,
   })}
+  a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #88989e;
+    transition: 200ms ease-in-out;
+    margin: 12px;
+    ${breakpointsMedia({
+      xs: css`
+        ${TextStyleVariantsMap.smallestException}
+      `,
+      md: css`
+        ${TextStyleVariantsMap.paragraph1}
+      `,
+    })}
+    &:hover,
+    &:focus {
+      font-weight: 500;
+      color: #070c0e;
+    }
+  }
 `;
 
 export const MenuWrapper = { Menu, LeftSide, CentralSide, RightSide };

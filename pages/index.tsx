@@ -24,7 +24,7 @@ function HomeScreen() {
             xs: 12,
             md: 6,
           }}
-          backgroundImage={{ md: "url(/images/psico.png)" }}
+          backgroundImage={{ md: "url(/images/person-1.jpg)" }}
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
         />
@@ -33,11 +33,13 @@ function HomeScreen() {
           offset={{ xs: 0, md: 0 }}
           display="flex"
           alignItems="flex-center"
-          height={{ xs: "900px" }}
+          height={{ xs: "700px" }}
           paddingLeft={{ xs: "30px", lg: "10px" }}
           justifyContent="center"
           flexDirection="column"
-          background={{ xs: "url(/images/psico.png)", md: "none" }}
+          backgroundImage={{ xs: "url(/images/person-1.jpg)", md: "none" }}
+          backgroundSize="99%"
+          backgroundRepeat="no-repeat"
           backgroundPosition={{ xs: "center", md: 0 }}
         >
           <Grid.Container
