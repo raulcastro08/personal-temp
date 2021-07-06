@@ -80,11 +80,20 @@ const aboutScreen = () => {
             justifyContent="center"
             marginTop={{ md: "40px" }}
           >
-            <Image
+            {/* <Image
               src="/images/psico.png"
               alt="Picture of the author"
               width={400}
               height={450}
+            /> */}
+            <Grid.Container
+              backgroundImage={{
+                xs: "url(/images/person-2.jpg)",
+                md: "url(/images/person-2.jpg)",
+              }}
+              backgroundRepeat="round"
+              width="450px"
+              height="500px"
             />
           </Grid.Col>
         </Grid.Row>
