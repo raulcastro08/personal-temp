@@ -29,7 +29,7 @@ const Menu = () => {
   return (
     <MenuWrapper.Menu>
       <MenuWrapper.LeftSide>
-        <Logo />
+        <Logo size="large" />
       </MenuWrapper.LeftSide>
       {/* <MenuWrapper.CentralSide>
         {links.map((link) => (
