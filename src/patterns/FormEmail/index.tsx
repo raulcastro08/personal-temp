@@ -22,7 +22,7 @@ function FormEmail() {
           password: values.password,
         });
 
-        router.push("/app/profile");
+        router.push("/");
       } catch (error) {
         console.log(error);
       }
