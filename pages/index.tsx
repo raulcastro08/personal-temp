@@ -159,13 +159,13 @@ function HomeScreen() {
           paddingLeft={{ sm: "50px", lg: "100px" }}
           paddingRight={{ sm: "50px", lg: "100px" }}
         >
-          <Grid.Container>
+          <Grid.Container paddingLeft={{ lg: 0 }}>
             <Text
               variant="paragraph1"
               tag="p"
               color="tertiary.light"
               textAlign={{
-                xs: "center",
+                xs: "justify",
                 md: "left",
               }}
               fontFamily="Montserrat"
@@ -184,7 +184,7 @@ function HomeScreen() {
               tag="p"
               color="tertiary.light"
               textAlign={{
-                xs: "center",
+                xs: "justify",
                 md: "left",
               }}
               fontFamily="Montserrat"
@@ -197,19 +197,20 @@ function HomeScreen() {
               iniciar o seu negócio e o que o torna diferente de seus
               competidores.
             </Text>
-
-            <Button
-              tag="link"
-              href="/sobre"
-              variant="primary.main"
-              fullWidth
-              margin={{
-                xs: "0, 1000px",
-                md: "initial",
-              }}
+            <Grid.Container
+              display="flex"
+              justifyContent={{ xs: "center", lg: "left" }}
+              padding={{ lg: 0 }}
             >
-              Saiba mais
-            </Button>
+              <Button
+                tag="link"
+                href="/sobre"
+                variant="primary.main"
+                // fullWidth
+              >
+                Saiba mais
+              </Button>
+            </Grid.Container>
           </Grid.Container>
         </Grid.Col>
       </Grid.Row>
@@ -267,7 +268,7 @@ function HomeScreen() {
               tag="p"
               color="tertiary.light"
               textAlign={{
-                xs: "center",
+                xs: "justify",
                 md: "left",
               }}
               fontFamily="Montserrat"
@@ -281,43 +282,46 @@ function HomeScreen() {
               você contar sua história e permitir que seus clientes saibam um
               pouco mais sobre você.
             </Text>
-            <Grid.Container
-              display={{ md: "block", lg: "flex" }}
-              width={{ xs: "350px" }}
-            >
-              <Grid.Col value={{ xs: 12, md: 12, lg: 6 }} display="block">
-                <Text
-                  variant="paragraph1"
-                  tag="p"
-                  color="tertiary.light"
-                  textAlign={{
-                    xs: "center",
-                    md: "left",
-                  }}
-                  fontFamily="Montserrat"
-                >
-                  Av. Bernardino de Campos 98, Pinheiros - São Paulo - SP
-                  info@meusite.com
-                </Text>
-              </Grid.Col>
-              <Grid.Col value={{ md: 12, lg: 6 }} display="block">
-                <Text
-                  variant="paragraph1"
-                  tag="p"
-                  color="tertiary.light"
-                  textAlign={{
-                    xs: "center",
-                    md: "left",
-                  }}
-                  fontFamily="Montserrat"
-                  marginBottom={{ lg: "10px" }}
-                >
-                  Tel: (11) 3456-7890 Fax: (11) 3456-7890
-                </Text>
-              </Grid.Col>
-            </Grid.Container>
           </Grid.Container>
-          <Grid.Container width={{ xs: "500px" }}>
+          <Grid.Container
+            display={{ md: "block", lg: "flex" }}
+            justifyContent={{ xs: "left" }}
+            background={{ xs: "#ffffffea", md: "none" }}
+            width={{ xs: "400px", lg: "430px" }}
+          >
+            <Grid.Col value={{ xs: 12, md: 12, lg: 6 }} display="block">
+              <Text
+                variant="paragraph1"
+                tag="p"
+                color="tertiary.light"
+                textAlign={{
+                  xs: "center",
+                  md: "left",
+                }}
+                fontFamily="Montserrat"
+              >
+                Av. Bernardino de Campos 98, Pinheiros - São Paulo - SP
+                info@meusite.com
+              </Text>
+            </Grid.Col>
+            <Grid.Col value={{ md: 12, lg: 6 }} display="block">
+              <Text
+                variant="paragraph1"
+                tag="p"
+                color="tertiary.light"
+                textAlign={{
+                  xs: "center",
+                  md: "left",
+                }}
+                fontFamily="Montserrat"
+                // marginBottom={{ lg: "10px" }}
+              >
+                Tel: (11) 3456-7890 Fax: (11) 3456-7890
+              </Text>
+            </Grid.Col>
+          </Grid.Container>
+
+          <Grid.Container marginTop="20px" width={{ xs: "430px" }}>
             <FormEmail />
           </Grid.Container>
         </Grid.Col>
