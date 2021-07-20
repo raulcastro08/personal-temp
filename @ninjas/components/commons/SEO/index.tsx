@@ -10,9 +10,9 @@ const SEO: React.FC<SEOProps> = ({ headTitle }) => {
   const baseTitle = "Template Pessoal";
   const title = hasHeadTitle ? `${headTitle} | ${baseTitle}` : baseTitle;
 
-  const description = "Tenha seu site de maneira prática e sem dor de cabeça";
-  const image =
-    "https://www.alura.com.br/assets/img/alura-share.1571848411.png";
+  const description =
+    "Seja visto de forma profissional na internet, alcance novos mercados para seus serviços ou produtos";
+  const image = "/images/seo.png";
   const urlBase = "urldomeuprojeto.com.br";
 
   return (
