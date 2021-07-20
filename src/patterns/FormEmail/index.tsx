@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { Button } from "@ninjas/components/commons/Button";
 import TextField from "@ninjas/components/forms/TextField";
 import { useForm } from "@ninjas/infra/hooks/forms/useForm";
+import { Grid } from "../../../@ninjas/components/foundation/Layout/Grid";
 import { loginService } from "../../services/login/loginService";
 
 function FormEmail() {
@@ -54,19 +55,22 @@ function FormEmail() {
         value={form.values.password}
         onChange={form.handleChange}
       />
-
-      <Button
-        tag="button"
-        type="submit"
-        variant="primary.main"
-        margin={{
-          xs: "0 auto",
-          md: "initial",
-        }}
-        fullWidth
+      <Grid.Container
+        display="flex"
+        justifyContent={{ xs: "center", lg: "left" }}
       >
-        Enviar
-      </Button>
+        <Button
+          tag="button"
+          type="button"
+          variant="primary.main"
+          margin={{
+            xs: "0 auto",
+            md: "center",
+          }}
+        >
+          Enviar
+        </Button>
+      </Grid.Container>
     </form>
   );
 }
