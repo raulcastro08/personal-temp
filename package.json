@@ -11,7 +11,7 @@
     "test:integration:open": "cypress open"
   },
   "dependencies": {
-    "@commitlint/cli": "^12.0.1",
+    "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^12.0.1",
     "@crello/react-lottie": "^0.0.11",
     "csstype": "^3.0.8",
